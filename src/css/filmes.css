@@ -1,0 +1,89 @@
+.textos {
+    width: 100%;
+    font-size: 16px;
+    height: 100px;
+    padding-top: 10px;
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.data{
+    font-weight: 300;
+}
+
+
+.filmeDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 0px 5px 50px 0px; */
+}
+
+.filmeDiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.allMovies{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 50px;
+}
+
+
+.pages{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 100px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 700;
+    color: #5C16C5;
+}
+
+.page:hover{
+    cursor: pointer;
+    border-bottom: 2px solid #5C16C5;
+
+}
+
+.selectedPage{
+    border-bottom: 2px solid #5C16C5;
+}
+
+@media (max-width: 580px) {
+    .allMovies{
+        grid-template-columns: repeat(2, 50%);
+    }
+    .textos{
+        font-size: 4vw;
+    }
+
+    .Header-todosGeneros{
+        justify-content: start;
+    }
+
+    .Header-genero{
+        padding: 10px 20px;
+    }
+}
+
+.Link{
+    text-decoration: none;
+    color: unset;
+}
+
+@media (max-width: 260px) {
+    .allMovies{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .textos{
+        font-size: 5vw;
+    }
+}

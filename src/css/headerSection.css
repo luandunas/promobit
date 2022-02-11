@@ -1,0 +1,126 @@
+:root{
+    --cor-roxo-claro: #5C16C5;
+    --cor-roxo-escuro: #2D0C5E;
+    --cor-laranja-selecionado: orange;
+}
+
+/* Estilos Header */
+
+.Header-nav{
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-roxo-claro);
+}
+
+.Header-logo{
+    width: 150px;
+    padding-left: 100px;
+    height: auto;
+}
+
+.Header-principal{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-roxo-escuro);
+    flex-direction: column;
+}
+
+.Header-texto{
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+}
+
+/* Estilos filtro generos */
+
+.Hearder-filtroTexto{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 30px;
+}
+
+.Header-todosGeneros{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.Header-genero{
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Header-genero:hover{
+    cursor: pointer;
+}
+
+.Header-genero .Header-generoTexto{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.closeButton {
+    display: none;
+    padding-left: 5px;
+}
+
+.closeButton img{
+    width: 20px;
+}
+
+.selected {
+    background-color: var(--cor-laranja-selecionado);
+}
+
+@media (max-width: 580px) {
+    .Header-genero .Header-generoTexto{
+        font-size: 15px;
+    }
+
+    .Header-principal{
+        align-items: flex-start;
+    }
+
+    .Header-texto{
+        width: 90%;
+        text-align: start;
+        font-size: 32px;
+        padding-bottom: 30px;
+        font-weight: 700;
+    }
+
+    .Header-texto, .Hearder-filtroTexto, .Header-todosGeneros{
+        margin-left: 10px;
+        padding-top: 0;
+    }
+
+    .Hearder-filtroTexto{
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+
+    .closeButton img{
+        width: 15px;
+    }
+}
